@@ -92,6 +92,8 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlImagePosition) {
  */
 @property (nonatomic, strong) NSDictionary *selectedTitleTextAttributes UI_APPEARANCE_SELECTOR;
 
+
+@property (nonatomic, strong) NSDictionary *disabledTitleTextAttributes UI_APPEARANCE_SELECTOR;
 /**
  Segmented control background color.
  
@@ -100,18 +102,11 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlImagePosition) {
 @property (nonatomic, strong) UIColor *backgroundColor UI_APPEARANCE_SELECTOR;
 
 /**
- Color for the selection indicator stripe
+ Color for the selection indicator stripe/box
  
  Default is `R:52, G:181, B:229`
  */
 @property (nonatomic, strong) UIColor *selectionIndicatorColor UI_APPEARANCE_SELECTOR;
-
-/**
- Color for the selection indicator box
- 
- Default is selectionIndicatorColor
- */
-@property (nonatomic, strong) UIColor *selectionIndicatorBoxColor UI_APPEARANCE_SELECTOR;
 
 /**
  Color for the vertical divider between segments.
@@ -258,6 +253,8 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlImagePosition) {
 - (instancetype)initWithSectionTitles:(NSArray<NSString *> *)sectiontitles;
 - (instancetype)initWithSectionImages:(NSArray<UIImage *> *)sectionImages sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages;
 - (instancetype)initWithSectionImages:(NSArray<UIImage *> *)sectionImages sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages titlesForSections:(NSArray<NSString *> *)sectiontitles;
+
+- (void)setEnabled:(BOOL)enabled forSegmentAtIndex:(NSUInteger)segment;
 
 - (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated;
 - (void)setIndexChangeBlock:(IndexChangeBlock)indexChangeBlock;
