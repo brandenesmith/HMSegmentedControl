@@ -34,6 +34,7 @@ NSUInteger HMSegmentedControlNoSegment = (NSUInteger)-1;
 @property (nonatomic, strong) HMScrollView *scrollView;
 @property (nonatomic, strong) NSMutableArray *accessibilityElements;
 @property (nonatomic, strong) NSMutableArray *titleBackgroundLayers;
+@property (nonatomic, strong) NSMutableArray *segmentDisabledArray;
 
 @end
 
