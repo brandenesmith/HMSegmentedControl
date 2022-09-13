@@ -959,7 +959,6 @@ NSUInteger HMSegmentedControlNoSegment = (NSUInteger)-1;
 
 - (void)scrollTo:(NSUInteger)index animated:(BOOL)animated {
     CGRect rectForSelectedIndex = CGRectNull;
-    CGRect rectForSelectedIndex;
     CGFloat selectedSegmentOffset = 0;
     if (self.segmentWidthStyle == HMSegmentedControlSegmentWidthStyleFixed) {
         rectForSelectedIndex = CGRectMake(self.segmentWidth * index,
